@@ -1,0 +1,15 @@
+# Exclude everything as default
+*
+
+# Include all yaml files
+!*.yaml
+
+# Exclude following yaml files
+secrets.yaml
+known_devices.yaml
+
+# Include directories
+!automation
+
+# Include this file
+!.gitignore

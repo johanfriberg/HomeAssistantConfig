@@ -1,0 +1,14 @@
+###########################################
+# ssl_cert_renewal_warning
+#    Sends notification when automatic
+#    renewal of SSL certificate has failed.
+###########################################
+#  - alias: 'SSL expiry notification'
+#    trigger:
+#      platform: numeric_state
+#      entity_id: sensor.ssl_cert_expiry
+#      below: 21
+#    action:
+      #service: notify.<någon bra framtida notifiering>
+      #data:
+      #  message: 'Varning - SSL-certifikatet går ut om 21 dagar och har inte uppdaterats automatiskt.'
