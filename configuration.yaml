@@ -115,6 +115,12 @@ sensor:
     scan_interval: 10800
     command: !secret ssl_cert_exp_cmd
 
+  - platform: travisci
+    api_key: !secret travisci_api_key
+    monitored_conditions:
+      - last_build_state
+    repository: HomeAssistantConfig
+
 
 ##########
 # Timers #
