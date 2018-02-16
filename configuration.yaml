@@ -66,6 +66,7 @@ history:
     entities:
       - group.all_switches
       - group.all_devices
+      - sensor.ssl_cert_expiry
       - sensor.yr_symbol
       - sun.sun
       - sensor.illumination_34ce00fb4f7c
