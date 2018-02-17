@@ -122,6 +122,13 @@ sensor:
       - last_build_state
     repository: HomeAssistantConfig
 
+##########
+# Lights #
+##########
+# Zigbee Lights
+light:
+  platform: hue
+  host: !secret deconz_ip
 
 ##########
 # Timers #
