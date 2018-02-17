@@ -126,9 +126,12 @@ sensor:
 # Lights #
 ##########
 # Zigbee Lights
-light:
-  platform: hue
+#light:
+#  platform: hue
+#  host: !secret deconz_ip
+deconz:
   host: !secret deconz_ip
+  port: !secret deconz_port
 
 ##########
 # Timers #
