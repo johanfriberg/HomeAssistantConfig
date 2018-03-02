@@ -10,8 +10,15 @@ known_devices.yaml
 
 # Include directories
 !automation
+!scripts
+!scripts/*
+!scripts/python
+!scripts/python/*
 
-# Include this file
+# Exclude files
+dropbox_sync.py
+
+# Include files
 !.gitignore
 !gitupdate.sh
 !.travis.yml
