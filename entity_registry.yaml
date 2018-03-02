@@ -112,45 +112,27 @@ sensor.vardagsrum_fonster_power_management:
 switch.kaffebryggare_switch:
   platform: zwave
   unique_id: 9-72057594193723392
-light.koket_taket_2:
-  platform: deconz
-  unique_id: 00:17:88:01:02:db:82:6f-0b
-light.koket_bordet:
-  platform: deconz
-  unique_id: 00:17:88:01:03:dc:ca:79-0b
-light.koket_taket_3:
-  platform: deconz
-  unique_id: 00:17:88:01:03:b8:ed:5a-0b
-light.korridoren:
-  platform: deconz
-  unique_id: 00:17:88:01:03:f2:f9:6f-0b
-light.hallen_2:
-  platform: deconz
-  unique_id: 00:17:88:01:03:f2:f6:85-0b
-light.koket_taket_1:
-  platform: deconz
-  unique_id: 00:17:88:01:02:db:0d:82-0b
-sensor.vardagsrum:
-  platform: deconz
-  unique_id: 00:15:8d:00:01:b9:63:87-01-0402
-sensor.vardagsrum_2:
-  platform: deconz
-  unique_id: 00:15:8d:00:01:b9:63:87-01-0403
-sensor.vardagsrum_3:
-  platform: deconz
-  unique_id: 00:15:8d:00:01:b9:63:87-01-0405
 binary_sensor.ytterdorr:
   platform: deconz
   unique_id: 00:15:8d:00:01:d3:aa:d1-01-0006
-sensor.sovrum:
+light.koket_taket_3:
   platform: deconz
-  unique_id: 00:15:8d:00:01:b9:55:6e-01-0402
-sensor.sovrum_2:
+  unique_id: 00:17:88:01:03:b8:ed:5a-0b
+light.koket_bordet:
   platform: deconz
-  unique_id: 00:15:8d:00:01:b9:55:6e-01-0405
-sensor.sovrum_3:
+  unique_id: 00:17:88:01:03:dc:ca:79-0b
+light.entren:
   platform: deconz
-  unique_id: 00:15:8d:00:01:b9:55:6e-01-0403
+  unique_id: 00:17:88:01:03:f2:f6:85-0b
+light.koket_taket_2:
+  platform: deconz
+  unique_id: 00:17:88:01:02:db:82:6f-0b
+light.korridoren:
+  platform: deconz
+  unique_id: 00:17:88:01:03:f2:f9:6f-0b
+light.koket_taket_1:
+  platform: deconz
+  unique_id: 00:17:88:01:02:db:0d:82-0b
 sensor.kok:
   platform: deconz
   unique_id: 00:15:8d:00:01:b9:46:51-01-0402
@@ -166,6 +148,24 @@ sensor.barnkammare:
 sensor.barnkammare_2:
   platform: deconz
   unique_id: 00:15:8d:00:01:b9:63:39-01-0405
+sensor.vardagsrum:
+  platform: deconz
+  unique_id: 00:15:8d:00:01:b9:63:87-01-0405
+sensor.vardagsrum_2:
+  platform: deconz
+  unique_id: 00:15:8d:00:01:b9:63:87-01-0402
 sensor.barnkammare_3:
   platform: deconz
   unique_id: 00:15:8d:00:01:b9:63:39-01-0403
+sensor.vardagsrum_3:
+  platform: deconz
+  unique_id: 00:15:8d:00:01:b9:63:87-01-0403
+sensor.sovrum:
+  platform: deconz
+  unique_id: 00:15:8d:00:01:b9:55:6e-01-0402
+sensor.sovrum_2:
+  platform: deconz
+  unique_id: 00:15:8d:00:01:b9:55:6e-01-0405
+sensor.sovrum_3:
+  platform: deconz
+  unique_id: 00:15:8d:00:01:b9:55:6e-01-0403
