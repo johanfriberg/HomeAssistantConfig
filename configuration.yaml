@@ -1,0 +1,159 @@
+homeassistant:
+  # Name of the location where Home Assistant is running
+  name: Home
+  # Location required to calculate the time the sun rises and sets
+  latitude: !secret lat_home
+  longitude: !secret long_home
+  # Impacts weather/sunrise data (altitude above sea level in meters)
+  elevation: 6
+  # metric for Metric, imperial for Imperial
+  unit_system: metric
+  # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone: !secret timezone
+  # Customization file
+  customize: !include customize.yaml
+  customize_glob: !include customize_glob.yaml
+
+# Enables the frontend
+frontend:
+
+# Enables configuration UI
+config:
+
+http:
+  # Secrets are defined in the file secrets.yaml
+  api_password: !secret http_password
+  # Uncomment this if you are using SSL/TLS, running in Docker container, etc.
+  ssl_certificate: !secret ssl_certificate
+  ssl_key: !secret ssl_key
+  base_url: !secret base_url
+  ip_ban_enabled: true
+  login_attempts_threshold: 3
+
+# Checks for available updates
+# Note: This component will send some information about your system to
+# the developers to assist with development of Home Assistant.
+# For more information, please see:
+# https://home-assistant.io/blog/2016/10/25/explaining-the-updater/
+updater:
+  # Optional, allows Home Assistant developers to focus on popular components.
+  # include_used_components: true
+
+# Discover some devices automatically
+discovery:
+
+#####################
+# In/out components #
+#####################
+# Allows you to issue voice commands from the frontend in enabled browsers
+conversation:
+
+# Text to speech
+tts:
+- platform: google
+
+##################################
+# Logging and history components #
+##################################
+# Enables support for tracking state changes over time. Uses recorder component
+history:
+  exclude:
+    domains:
+      - automation
+      - zwave
+      - switch
+      - device_tracker
+    entities:
+      - group.all_switches
+      - group.all_devices
+      - sensor.ssl_cert_expiry
+      - sensor.yr_symbol
+      - sun.sun
+      - sensor.illumination_34ce00fb4f7c
+      - timer.kaffetimer
+
+# View all events in a logbook. Uses recorder component
+logbook:
+
+# Enables support for tracking state changes over time.
+recorder:
+  # Delete events and states older than 1 week
+  purge_interval: 2
+  purge_keep_days: 7
+
+# Set severity level for log
+logger:
+  default: warning
+
+#########################
+# Location and tracking #
+#########################
+# Enables a map showing the location of tracked devices
+map:
+
+zone: !include zones.yaml
+
+device_tracker:
+  - platform: netgear
+    host: !secret router_ip
+    username: !secret router_username
+    password: !secret router_password
+
+###########
+# Weather #
+###########
+# Track the sun
+sun:
+
+sensor:
+  # Weather prediction
+  - platform: yr
+
+  # Sensor checking days until renewal of SSL certificate expires
+  - platform: command_line
+    name: SSL cert expiry
+    unit_of_measurement: days
+    scan_interval: 10800
+    command: !secret ssl_cert_exp_cmd
+
+#  - platform: travisci
+#    api_key: !secret travisci_api_key
+#    monitored_conditions:
+#      - last_build_state
+#    repository: HomeAssistantConfig
+
+##########
+# Timers #
+##########
+# Timer for coffe maker, used in kaffetimer.yaml
+timer:
+  kaffetimer:
+    duration: '00:45:00'
+
+############
+# Gateways #
+############
+# Add Xiaomi Aquara gateway
+xiaomi_aqara:
+  discovery_retry: 5
+  gateways:
+    - mac: !secret xiaomi_aquara_mac # MAC
+      key: !secret xiaomi_aquara_key # Generated key
+
+# Z-wave support
+zwave:
+  usb_path: /dev/zwave
+
+###########
+# Scripts #
+###########
+# Shell scripts
+shell_command:
+  dropbox_backup: python /home/homeassistant/.homeassistant/scripts/python/dropbox_sync.py
+  renew_ssl: ~/certbot/certbot-auto renew --quiet --no-self-upgrade --standalone --preferred-challenges http-01
+############
+# Includes #
+############
+group: !include groups.yaml
+automation: !include_dir_merge_list automation/
+script: !include scripts.yaml

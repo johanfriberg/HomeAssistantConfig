@@ -1,0 +1,25 @@
+# Exclude everything as default
+*
+
+# Include all yaml files
+!*.yaml
+
+# Exclude following yaml files
+secrets.yaml
+known_devices.yaml
+
+# Include directories
+!automation
+!scripts
+!scripts/*
+!scripts/python
+!scripts/python/*
+
+# Exclude files
+dropbox_sync.py
+
+# Include files
+!.gitignore
+!gitupdate.sh
+!.travis.yml
+!travis_*
