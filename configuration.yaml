@@ -63,6 +63,7 @@ history:
       - zwave
       - switch
       - device_tracker
+      - light
     entities:
       - group.all_switches
       - group.all_devices
