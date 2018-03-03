@@ -1,0 +1,61 @@
+#################################
+# button_test
+#    Used to test xiaomi button
+#    functionality
+#################################
+
+################
+# One click    #
+################
+  - alias: Single click
+    trigger:
+      platform: event
+      event: deconz_event
+      event_data:
+        id: testknapp
+        event: 1002
+    action:
+      - service: light.toggle
+        entity_id: light.koket_taket_1
+
+################
+# Two clicks   #
+################
+  - alias: Double click
+    trigger:
+      platform: event
+      event: deconz_event
+      event_data:
+        id: testknapp
+        event: 1004
+    action:
+      - service: light.toggle
+        entity_id: light.koket_taket_2
+
+################
+# Three clicks #
+################
+  - alias: Tripple click
+    trigger:
+      platform: event
+      event: deconz_event
+      event_data:
+        id: testknapp
+        event: 1005
+    action:
+      - service: light.toggle
+        entity_id: light.koket_taket_3
+
+################
+# Four clicks  #
+################
+  - alias: Quadruple click
+    trigger:
+      platform: event
+      event: deconz_event
+      event_data:
+        id: testknapp
+        event: 1006
+    action:
+      - service: light.toggle
+        entity_id: light.koket_taklampa
