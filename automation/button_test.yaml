@@ -10,7 +10,7 @@
   - alias: Single click
     trigger:
       platform: event
-      event: deconz_event
+      event_type: deconz_event
       event_data:
         id: testknapp
         event: 1002
@@ -24,7 +24,7 @@
   - alias: Double click
     trigger:
       platform: event
-      event: deconz_event
+      event_type: deconz_event
       event_data:
         id: testknapp
         event: 1004
@@ -38,7 +38,7 @@
   - alias: Tripple click
     trigger:
       platform: event
-      event: deconz_event
+      event_type: deconz_event
       event_data:
         id: testknapp
         event: 1005
@@ -52,7 +52,7 @@
   - alias: Quadruple click
     trigger:
       platform: event
-      event: deconz_event
+      event_type: deconz_event
       event_data:
         id: testknapp
         event: 1006
