@@ -135,11 +135,11 @@ timer:
 # Gateways #
 ############
 # Add Xiaomi Aquara gateway
-xiaomi_aqara:
-  discovery_retry: 5
-  gateways:
-    - mac: !secret xiaomi_aquara_mac # MAC
-      key: !secret xiaomi_aquara_key # Generated key
+#xiaomi_aqara:
+#  discovery_retry: 5
+#  gateways:
+#    - mac: !secret xiaomi_aquara_mac # MAC
+#      key: !secret xiaomi_aquara_key # Generated key
 
 # Z-wave support
 zwave:
@@ -152,6 +152,7 @@ zwave:
 shell_command:
   dropbox_backup: python /home/homeassistant/.homeassistant/scripts/python/dropbox_sync.py
   renew_ssl: ~/certbot/certbot-auto renew --quiet --no-self-upgrade --standalone --preferred-challenges http-01
+
 ############
 # Includes #
 ############
