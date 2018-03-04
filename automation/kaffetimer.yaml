@@ -8,10 +8,10 @@
   - alias: Activate coffe timer
     trigger:
       platform: event
-      event_type: click
+      event_type: deconz_event
       event_data:
-        entity_id: binary_sensor.switch_158d000123def9
-        click_type: single #single/double
+        id: kaffeknapp
+        event: 1002 # Single click
     condition:
       condition: state
       entity_id: timer.kaffetimer
@@ -26,10 +26,10 @@
   - alias: Reset coffe timer duration
     trigger:
       - platform: event
-        event_type: click
+        event_type: deconz_event
         event_data:
-          entity_id: binary_sensor.switch_158d000123def9
-          click_type: double
+          id: kaffeknapp
+          event: 1004 # Double click
     condition:
       condition: state
       entity_id: timer.kaffetimer
@@ -42,10 +42,10 @@
   - alias: Deactivate coffe timer
     trigger:
       - platform: event
-        event_type: click
+        event_type: deconz_event
         event_data:
-          entity_id: binary_sensor.switch_158d000123def9
-          click_type: single
+          id: kaffeknapp
+          event: 1002 # Single click
       - platform: event
         event_type: timer.finished
         event_data:
