@@ -14,7 +14,7 @@
       platform: event
       event_type: deconz_event
       event_data:
-        id: Switch_köket
+        id: switch_koket
         event: 1002
     action:
       service: light.toggle
@@ -28,7 +28,7 @@
       platform: event
       event_type: deconz_event
       event_data:
-        id: Switch_köket
+        id: switch_koket
         event: 2002
     action:
       - service: light.turn_on
@@ -45,7 +45,7 @@
       platform: event
       event_type: deconz_event
       event_data:
-        id: Switch_köket
+        id: switch_koket
         event: 3002
     action:
       - service: light.turn_on
