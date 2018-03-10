@@ -7,7 +7,9 @@
 #############
 ## Kitchen ##
 #############
-  - alias: Toggle kitchen light
+## Toggle all kitchen lights
+  - alias: 'Toggle kitchen lights'
+    initial_state: 'on'
     trigger:
       platform: event
       event_type: deconz_event
@@ -17,3 +19,25 @@
     action:
       service: light.toggle
       entity_id: light.koket
+
+## Dim all kitchen lights
+  # Brighter
+  - alias: 'Increase brightness of kitchen lights'
+    initial_state: 'on'
+    trigger:
+      platform: event
+      event_type: deconz_event
+      event_data:
+        id: Switch_köket
+        event: 2002
+    action:
+      - service: light.turn_on
+        data_template:
+          entity_id: light.koket
+          brightness: >
+            {% set bri = states.light.koket.attributes.brightness | int %}
+            {{ [bri+30, 249] | min }}
+
+  # Darker
+
+## Change temp for all kitchen lights
