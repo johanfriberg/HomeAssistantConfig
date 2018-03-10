@@ -1,0 +1,16 @@
+###########################################
+# automatic_git_pull
+#    Contains automation that triggs an
+#    automatic git pull, followed by a
+#    restart at successful Travis CI build
+###########################################
+
+  - alias: Update config if Travis build is successful
+    trigger:
+      platform: state
+      entity_id: sensor.johanfriberghomeassistantconfig_last_build_state
+      to: 'passed'
+    action:
+      - service: shell_command.git_pull
+      - delay: 00:00:30
+      - service: homeassistant.restart
