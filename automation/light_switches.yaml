@@ -56,3 +56,21 @@
             {{ [bri-30, 0] | max }}
 
 ## Change temp for all kitchen lights
+  # Warmer
+  - alias: 'Warmer kitchen ligth colour temperature'
+    initial_state: 'on'
+    trigger:
+      platform: event
+      event_type: deconz_event
+      event_data:
+        id: switch_koket
+        event: 4002
+    action:
+      - service: light.turn_on
+        data_template:
+          entity_id: light.koket
+          color_temp: >
+            {% set ct = states.light.koket.attributes.color_temp | int %}
+            {{ [ct+30, 454] | min }}
+
+  # Colder
