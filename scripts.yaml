@@ -3,3 +3,9 @@
     alias: Backup HA config to Dropbox
     sequence:
       - service: shell_command.dropbox_backup
+#
+#  update_config:
+#    alias: GIT Pull and restart HA
+#    sequence:
+#      - service: shell_command.git_pull
+#      - service: homeassistant.restart

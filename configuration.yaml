@@ -152,6 +152,7 @@ zwave:
 shell_command:
   dropbox_backup: python /home/homeassistant/.homeassistant/scripts/python/dropbox_sync.py
   renew_ssl: ~/certbot/certbot-auto renew --quiet --no-self-upgrade --standalone --preferred-challenges http-01
+  git_pull: bash /home/homeassistant/.homeassistant/scripts/bash/git_pull.sh
 
 ############
 # Includes #
