@@ -12,5 +12,5 @@
       to: 'passed'
     action:
       - service: shell_command.git_pull
-      - delay: 00:00:30
+      - delay: 00:00:10
       - service: homeassistant.restart
