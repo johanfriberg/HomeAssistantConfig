@@ -1,0 +1,19 @@
+###########################################
+# light_switches
+#    Contains all automations concerning
+#    physical light switches
+###########################################
+
+#############
+## Kitchen ##
+#############
+  - alias: Toggle kitchen light
+    trigger:
+      platform: event
+      event_type: deconz_event
+      event_data:
+        id: Switch_köket
+        event: 1002
+    action:
+      service: light.toggle
+      entity_id: light.koket
