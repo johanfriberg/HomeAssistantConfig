@@ -14,6 +14,8 @@ known_devices.yaml
 !scripts/*
 !scripts/python
 !scripts/python/*
+!scripts/bash
+!scripts/bash/*
 
 # Exclude files
 dropbox_sync.py
