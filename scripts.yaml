@@ -4,6 +4,7 @@
     sequence:
       - service: shell_command.dropbox_backup
 
+  # GIT Pull and restart HA
   update_config:
     alias: GIT Pull and restart HA
     sequence:
