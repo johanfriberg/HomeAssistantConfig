@@ -20,6 +20,19 @@
       service: light.toggle
       entity_id: light.koket
 
+## Toggle kitchen table light
+  - alias: 'Toggle kitchen table light'
+    initial_state: 'on'
+    trigger:
+      platform: event
+      event_type: deconz_event
+      event_data:
+        id: switch_koket
+        event: 1003
+    action:
+      service: light.toggle
+      entity_id: light.koket_bordet
+
 ## Dim all kitchen lights
   # Brighter
   - alias: 'Increase brightness of kitchen lights'
@@ -89,3 +102,7 @@
           color_temp: >
             {% set ct = states.light.koket.attributes.color_temp | int %}
             {{ [ct-30, 153] | max }}
+
+#############
+## Hallway ##
+#############
