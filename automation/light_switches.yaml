@@ -31,7 +31,7 @@
         event: 2003
     action:
       service: light.toggle
-      entity_id: light.koket_taket
+      entity_id: light.koket_taklampa
 
 ## Toggle kitchen table light
   - alias: 'Toggle kitchen table light'
