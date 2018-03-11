@@ -28,7 +28,7 @@
       event_type: deconz_event
       event_data:
         id: switch_koket
-        event: 2001
+        event: 2003
     action:
       service: light.toggle
       entity_id: light.koket_taket
@@ -41,7 +41,7 @@
       event_type: deconz_event
       event_data:
         id: switch_koket
-        event: 3001
+        event: 3003
     action:
       service: light.toggle
       entity_id: light.koket_bordet
