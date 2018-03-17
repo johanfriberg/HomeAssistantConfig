@@ -39,7 +39,7 @@
     initial_state: 'on'
     trigger:
       - platform: state
-        entity: binary_sensor.rorelse_korridoren
+        entity_id: binary_sensor.rorelse_korridoren
         to: 'off'
         for:
           minutes: 10
