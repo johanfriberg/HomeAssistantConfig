@@ -119,3 +119,20 @@
 #############
 ## Hallway ##
 #############
+## Toggle hallway lights
+  - alias: 'Toggle hallway lights'
+    initial_state: 'on'
+    trigger:
+      - platform: event
+        event_type: deconz_event
+        event_data:
+          id: Switch_korridoren
+          event: 1002
+      - platform: event
+        event_type: deconz_event
+        event_data:
+          id: Switch_entren
+          event: 1002
+    action:
+      service: light.toggle
+      entity_id: light.hallen
