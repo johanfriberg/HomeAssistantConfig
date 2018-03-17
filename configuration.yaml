@@ -99,6 +99,9 @@ device_tracker:
     host: !secret router_ip
     username: !secret router_username
     password: !secret router_password
+    new_device_defaults:
+      track_new_devices: False
+      hide_if_away: False
 
 ###########
 # Weather #
