@@ -44,18 +44,18 @@
         for:
           minutes: 10
           seconds: 00
-    #condition: and
-    #conditions:
-    #  - condition: state
-    #    entity_id: sun.sun
-    #    state: 'below_horizon'
-    #  - condition: time
-    #    after: '00:00:00'
-    #  - condition: state
-    #    entity_id: light.korridoren
-    #    state: 'on'
-    #  - condition: sun
-    #    before: sunrise
+    condition: and
+    conditions:
+      - condition: state
+        entity_id: sun.sun
+        state: 'below_horizon'
+      - condition: time
+        after: '00:00:00'
+      - condition: state
+        entity_id: light.korridoren
+        state: 'on'
+      - condition: sun
+        before: sunrise
     action:
       service: light.turn_off
       entity_id: light.korridoren
