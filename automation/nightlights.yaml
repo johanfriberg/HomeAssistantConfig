@@ -44,8 +44,9 @@
         for:
           minutes: 10
           seconds: 00
-    condition: and
-    conditions:
+    condition:
+      condition: and
+      conditions:
       - condition: state
         entity_id: sun.sun
         state: 'below_horizon'
