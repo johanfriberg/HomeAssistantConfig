@@ -169,12 +169,12 @@
         event_type: deconz_event
         event_data:
           id: switch_korridoren
-          data: 3002
+          event: 3002
       - platform: event
         event_type: deconz_event
         event_data:
           id: switch_entren
-          data: 3002
+          event: 3002
     action:
       - service: light.turn_on
         data_template:
@@ -192,12 +192,12 @@
         event_type: deconz_event
         event_data:
           id: switch_korridoren
-          data: 4002
+          event: 4002
       - platform: event
         event_type: deconz_event
         event_data:
           id: switch_entren
-          data: 4002
+          event: 4002
     action:
       - service: light.turn_on
         data_template:
@@ -205,3 +205,25 @@
           color_temp: >
             {% set ct = states.light.hallen.attributes.color_temp | int %}
             {{ [ct+30, 454] | min }}
+
+  # Colder
+  - alias: 'Colder hallway light colour temperature'
+    initial_state: 'on'
+    trigger:
+      - platform: event
+        event_type: deconz_event
+        event_data:
+          id: switch_korridoren
+          event: 5002
+      - platform: event
+        event_type: deconz_event
+        event_data:
+          id: switch_entren
+          event: 5002
+    action:
+      - service: light.turn_on
+        data_template:
+          entity_id: light.hallen
+          color_temp: >
+           {% set ct = states.light.hallen.attributes.color_temp | int %}
+           {{ [ct-30, 153] | max }}
