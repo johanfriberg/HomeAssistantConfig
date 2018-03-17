@@ -7,7 +7,7 @@
 #############
 ## Hallway ##
 #############
-## Light in hallway when motion detected
+## Light in hallway on when motion detected during night time
   - alias: 'Hallway night light on'
     initial_state: 'on'
     trigger:
@@ -33,3 +33,29 @@
           entity_id: light.korridoren
           brightness: 100
           color_temp: 454
+
+## Light in hallway off after 10 minutes during night time
+  - alias: 'Hallway night light off'
+    initial_state: 'on'
+    trigger:
+      - platform: state
+        entity: binary_sensor.rorelse_korridoren
+        to: 'off'
+        for:
+          minutes: 10
+          seconds: 00
+    condition: and
+    conditions:
+      - condition: state
+        entity_id: sun.sun
+        state: 'below_horizon'
+      - condition: time
+        after: '00:00:00'
+      - condition: state
+        entity_id: light.korridoren
+        state: 'on'
+      - condition: sun
+        before: sunrise
+    action:
+      - service: light.turn_off
+        entity_id: light.korridoren
