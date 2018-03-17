@@ -182,3 +182,26 @@
           brightness: >
             {% set bri = states.light.hallen.attributes.brightness | int %}
             {{ [bri-30, 0] | max }}
+
+## Change temp
+  # Warmer
+  - alias: 'Warmer hallway lights coulour temperature'
+    initial_state: 'on'
+    trigger:
+      - platform: event
+        event_type: deconz_event
+        event_data:
+          id: switch_korridoren
+          data: 4002
+      - platform: event
+        event_type: deconz_event
+        event_data:
+          id: switch_entren
+          data: 4002
+    action:
+      - service: light.turn_on
+        data_template:
+          entity_id: light.hallen
+          color_temp: >
+            {% set ct = states.light.hallen.attributes.color_temp | int %}
+            {{ [ct+30, 454] | min }}
