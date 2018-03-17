@@ -1,0 +1,35 @@
+###########################################
+# nightlights
+#    Contains all automations concerning
+#    automatic nighit lights
+###########################################
+
+#############
+## Hallway ##
+#############
+## Light in hallway when motion detected
+  - alias: 'Hallway night light on'
+    initial_state: 'on'
+    trigger:
+      - platform: state
+        entity_id: binary_sensor.rorlse_korridoren
+        to: 'on'
+    condition:
+      condition: and
+      conditions:
+        - condition: state
+          entity_id: sun.sun
+          state: 'below_horizon'
+        - condition: state
+          entity_id: light.korridoren
+          state: 'off'
+        - condition: time
+          after: '00:00:00'
+        - condition: sun
+          before: sunrise
+    action:
+      - service: light.turn_on
+        data:
+          entity_id: light.korridoren
+          brightness: 100
+          color_temp: 454
