@@ -126,12 +126,12 @@
       - platform: event
         event_type: deconz_event
         event_data:
-          id: Switch_korridoren
+          id: switch_korridoren
           event: 1002
       - platform: event
         event_type: deconz_event
         event_data:
-          id: Switch_entren
+          id: switch_entren
           event: 1002
     action:
       service: light.toggle
