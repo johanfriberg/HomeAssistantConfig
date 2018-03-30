@@ -14,46 +14,46 @@
       - platform: state
         entity_id: binary_sensor.rorlse_korridoren
         to: 'on'
-    condition:
-      condition: and
-      conditions:
-        - condition: state
-          entity_id: light.korridoren
-          state: 'off'
-        - condition: or
-          conditions:
-          - condition: sun
-            before: sunrise
-          - condition: sun
-            after: sunset
-        - condition: or
-          conditions:
-          - condition: time
-            after: '22:30:00'
-            weekday:
-              - mon
-              - tue
-              - wed
-              - thu
-              - sun
-          - condition: time
-            after: '00:00:30'
-            weekday:
-              - sat
-              - sun
-          - condition: time
-            before: '07:30:00'
-            weekday:
-              - mon
-              - tue
-              - wed
-              - thu
-              - fri
-          - condition: time
-            before: '09:00:00'
-            weekday:
-              - sat
-              - sun
+    #condition:
+    #  condition: and
+    #  conditions:
+    #    - condition: state
+    #      entity_id: light.korridoren
+    #      state: 'off'
+    #    - condition: or
+    #      conditions:
+    #      - condition: sun
+    #        before: sunrise
+    #      - condition: sun
+    #        after: sunset
+    #    - condition: or
+    #      conditions:
+    #      - condition: time
+    #        after: '22:30:00'
+    #        weekday:
+    #          - mon
+    #          - tue
+    #          - wed
+    #          - thu
+    #          - sun
+    #      - condition: time
+    #        after: '00:00:30'
+    #        weekday:
+    #          - sat
+    #          - sun
+    #      - condition: time
+    #        before: '07:30:00'
+    #        weekday:
+    #          - mon
+    #          - tue
+    #          - wed
+    #          - thu
+    #          - fri
+    #      - condition: time
+    #        before: '09:00:00'
+    #        weekday:
+    #          - sat
+    #          - sun
     action:
       - service: light.turn_on
         data:
@@ -71,46 +71,46 @@
         for:
           minutes: 10
           seconds: 00
-    condition:
-      condition: and
-      conditions:
-      - condition: state
-        entity_id: light.korridoren
-        state: 'on'
-      - condition: or
-        conditions:
-        - condition: sun
-          before: sunrise
-        - condition: sun
-          after: sunset
-      - condition: or
-        conditions:
-        - condition: time
-          after: '22:30:00'
-          weekday:
-            - mon
-            - tue
-            - wed
-            - thu
-            - sun
-        - condition: time
-          after: '00:00:30'
-          weekday:
-            - sat
-            - sun
-        - condition: time
-          before: '07:30:00'
-          weekday:
-            - mon
-            - tue
-            - wed
-            - thu
-            - fri
-        - condition: time
-          before: '09:00:00'
-          weekday:
-            - sat
-            - sun
+    #condition:
+    #  condition: and
+    #  conditions:
+    #  - condition: state
+    #    entity_id: light.korridoren
+    #    state: 'on'
+    #  - condition: or
+    #    conditions:
+    #    - condition: sun
+    #      before: sunrise
+    #    - condition: sun
+    #      after: sunset
+    #  - condition: or
+    #    conditions:
+    #    - condition: time
+    #      after: '22:30:00'
+    #      weekday:
+    #        - mon
+    #        - tue
+    #        - wed
+    #        - thu
+    #        - sun
+    #    - condition: time
+    #      after: '00:00:30'
+    #      weekday:
+    #        - sat
+    #        - sun
+    #    - condition: time
+    #      before: '07:30:00'
+    #      weekday:
+    #        - mon
+    #        - tue
+    #        - wed
+    #        - thu
+    #        - fri
+    #    - condition: time
+    #      before: '09:00:00'
+    #      weekday:
+    #        - sat
+    #        - sun
     action:
       service: light.turn_off
       entity_id: light.korridoren
