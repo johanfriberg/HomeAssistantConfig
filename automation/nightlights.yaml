@@ -18,20 +18,47 @@
       condition: and
       conditions:
         - condition: state
-          entity_id: sun.sun
-          state: 'below_horizon'
-        - condition: state
           entity_id: light.korridoren
           state: 'off'
-        - condition: time
-          after: '00:00:00'
-        - condition: sun
-          before: sunrise
+        - condition: or
+          conditions:
+          - condition: sun
+            before: sunrise
+          - condition: sun
+            after: sunset
+        - condition: or
+          conditions:
+          - condition: time
+            after: '22:30:00'
+            weekday:
+              - mon
+              - tue
+              - wed
+              - thu
+              - sun
+          - condition: time
+            after: '00:00:30'
+            weekday:
+              - sat
+              - sun
+          - condition: time
+            before: '07:30:00'
+            weekday:
+              - mon
+              - tue
+              - wed
+              - thu
+              - fri
+          - condition: time
+            before: '09:00:00'
+            weekday:
+              - sat
+              - sun
     action:
       - service: light.turn_on
         data:
           entity_id: light.korridoren
-          brightness: 100
+          brightness: 10
           color_temp: 454
 
 ## Light in hallway off after 10 minutes during night time
@@ -48,15 +75,42 @@
       condition: and
       conditions:
       - condition: state
-        entity_id: sun.sun
-        state: 'below_horizon'
-      - condition: time
-        after: '00:00:00'
-      - condition: state
         entity_id: light.korridoren
         state: 'on'
-      - condition: sun
-        before: sunrise
+      - condition: or
+        conditions:
+        - condition: sun
+          before: sunrise
+        - condition: sun
+          after: sunset
+      - condition: or
+        conditions:
+        - condition: time
+          after: '22:30:00'
+          weekday:
+            - mon
+            - tue
+            - wed
+            - thu
+            - sun
+        - condition: time
+          after: '00:00:30'
+          weekday:
+            - sat
+            - sun
+        - condition: time
+          before: '07:30:00'
+          weekday:
+            - mon
+            - tue
+            - wed
+            - thu
+            - fri
+        - condition: time
+          before: '09:00:00'
+          weekday:
+            - sat
+            - sun
     action:
       service: light.turn_off
       entity_id: light.korridoren
