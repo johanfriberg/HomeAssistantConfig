@@ -30,6 +30,7 @@
           conditions:
           - condition: time
             after: '22:30:00'
+            before: '07:30:00'
             weekday:
               - mon
               - tue
@@ -38,18 +39,6 @@
               - sun
           - condition: time
             after: '00:00:30'
-            weekday:
-              - sat
-              - sun
-          - condition: time
-            before: '07:30:00'
-            weekday:
-              - mon
-              - tue
-              - wed
-              - thu
-              - fri
-          - condition: time
             before: '09:00:00'
             weekday:
               - sat
@@ -87,6 +76,7 @@
         conditions:
         - condition: time
           after: '22:30:00'
+          before: '07:30:00'
           weekday:
             - mon
             - tue
@@ -95,18 +85,6 @@
             - sun
         - condition: time
           after: '00:00:30'
-          weekday:
-            - sat
-            - sun
-        - condition: time
-          before: '07:30:00'
-          weekday:
-            - mon
-            - tue
-            - wed
-            - thu
-            - fri
-        - condition: time
           before: '09:00:00'
           weekday:
             - sat
