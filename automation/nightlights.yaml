@@ -178,3 +178,6 @@
         #    weekday:
         #      - sat
         #      - sun
+    action:
+      service: light.turn_off
+      entity_id: light.entren
