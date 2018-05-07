@@ -238,18 +238,10 @@ sensor.switch_korridoren_battery_level:
   name:
   platform: deconz
   unique_id: 90:fd:9f:ff:fe:4c:98:37-01-1000
-binary_sensor.rorelse_korridoren:
-  name:
-  platform: deconz
-  unique_id: 00:0b:57:ff:fe:99:42:c6-01-0006
 media_player.synvillan:
   name:
   platform: cast
   unique_id: 978f9799-0845-d242-63d2-364b88be7d89
-binary_sensor.rorelse_korridoren_2:
-  name: rorelse_korridoren
-  platform: deconz
-  unique_id: 00:0b:57:ff:fe:99:42:c6-01-1000
 sensor.testknapp_battery_level:
   name:
   platform: deconz
