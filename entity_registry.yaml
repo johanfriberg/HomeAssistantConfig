@@ -1,171 +1,264 @@
 switch.sovrum_fonster_switch:
+  name:
   platform: zwave
   unique_id: 3-72057594093060096
 switch.kok_fonster_switch:
+  name:
   platform: zwave
   unique_id: 7-72057594160168960
 sensor.kok_fonster_energy:
+  name:
   platform: zwave
   unique_id: 7-72057594160381954
 sensor.kok_fonster_previous_reading:
+  name:
   platform: zwave
   unique_id: 7-72057594160381970
 sensor.kok_fonster_interval:
+  name:
   platform: zwave
   unique_id: 7-72057594160381987
 sensor.kok_fonster_power:
+  name:
   platform: zwave
   unique_id: 7-72057594160382082
 sensor.kok_fonster_previous_reading_2:
+  name:
   platform: zwave
   unique_id: 7-72057594160382098
 sensor.kok_fonster_interval_2:
+  name:
   platform: zwave
   unique_id: 7-72057594160382115
 sensor.kok_fonster_voltage:
+  name:
   platform: zwave
   unique_id: 7-72057594160382210
 sensor.kok_fonster_previous_reading_3:
+  name:
   platform: zwave
   unique_id: 7-72057594160382226
 sensor.kok_fonster_interval_3:
+  name:
   platform: zwave
   unique_id: 7-72057594160382243
 sensor.kok_fonster_current:
+  name:
   platform: zwave
   unique_id: 7-72057594160382274
 sensor.kok_fonster_previous_reading_4:
+  name:
   platform: zwave
   unique_id: 7-72057594160382290
 sensor.kok_fonster_interval_4:
+  name:
   platform: zwave
   unique_id: 7-72057594160382307
 sensor.kok_fonster_exporting:
+  name:
   platform: zwave
   unique_id: 7-72057594160382464
 sensor.kok_fonster_alarm_type:
+  name:
   platform: zwave
   unique_id: 7-72057594161414145
 sensor.kok_fonster_alarm_level:
+  name:
   platform: zwave
   unique_id: 7-72057594161414161
 sensor.kok_fonster_sourcenodeid:
+  name:
   platform: zwave
   unique_id: 7-72057594161414177
 sensor.kok_fonster_power_management:
+  name:
   platform: zwave
   unique_id: 7-72057594161414321
 switch.vardagsrum_fonster_switch:
+  name:
   platform: zwave
   unique_id: 8-72057594176946176
 sensor.vardagsrum_fonster_energy:
+  name:
   platform: zwave
   unique_id: 8-72057594177159170
 sensor.vardagsrum_fonster_previous_reading:
+  name:
   platform: zwave
   unique_id: 8-72057594177159186
 sensor.vardagsrum_fonster_interval:
+  name:
   platform: zwave
   unique_id: 8-72057594177159203
 sensor.vardagsrum_fonster_power:
+  name:
   platform: zwave
   unique_id: 8-72057594177159298
 sensor.vardagsrum_fonster_previous_reading_2:
+  name:
   platform: zwave
   unique_id: 8-72057594177159314
 sensor.vardagsrum_fonster_interval_2:
+  name:
   platform: zwave
   unique_id: 8-72057594177159331
 sensor.vardagsrum_fonster_voltage:
+  name:
   platform: zwave
   unique_id: 8-72057594177159426
 sensor.vardagsrum_fonster_previous_reading_3:
+  name:
   platform: zwave
   unique_id: 8-72057594177159442
 sensor.vardagsrum_fonster_interval_3:
+  name:
   platform: zwave
   unique_id: 8-72057594177159459
 sensor.vardagsrum_fonster_current:
+  name:
   platform: zwave
   unique_id: 8-72057594177159490
 sensor.vardagsrum_fonster_previous_reading_4:
+  name:
   platform: zwave
   unique_id: 8-72057594177159506
 sensor.vardagsrum_fonster_interval_4:
+  name:
   platform: zwave
   unique_id: 8-72057594177159523
 sensor.vardagsrum_fonster_exporting:
+  name:
   platform: zwave
   unique_id: 8-72057594177159680
 sensor.vardagsrum_fonster_alarm_type:
+  name:
   platform: zwave
   unique_id: 8-72057594178191361
 sensor.vardagsrum_fonster_alarm_level:
+  name:
   platform: zwave
   unique_id: 8-72057594178191377
 sensor.vardagsrum_fonster_sourcenodeid:
+  name:
   platform: zwave
   unique_id: 8-72057594178191393
 sensor.vardagsrum_fonster_power_management:
+  name:
   platform: zwave
   unique_id: 8-72057594178191537
 switch.kaffebryggare_switch:
+  name:
   platform: zwave
   unique_id: 9-72057594193723392
 binary_sensor.ytterdorr:
+  name:
   platform: deconz
   unique_id: 00:15:8d:00:01:d3:aa:d1-01-0006
 light.koket_taket_3:
+  name:
   platform: deconz
   unique_id: 00:17:88:01:03:b8:ed:5a-0b
 light.koket_bordet:
+  name:
   platform: deconz
   unique_id: 00:17:88:01:03:dc:ca:79-0b
 light.entren:
+  name:
   platform: deconz
   unique_id: 00:17:88:01:03:f2:f6:85-0b
 light.koket_taket_2:
+  name:
   platform: deconz
   unique_id: 00:17:88:01:02:db:82:6f-0b
 light.korridoren:
+  name:
   platform: deconz
   unique_id: 00:17:88:01:03:f2:f9:6f-0b
 light.koket_taket_1:
+  name:
   platform: deconz
   unique_id: 00:17:88:01:02:db:0d:82-0b
 sensor.kok:
+  name:
   platform: deconz
   unique_id: 00:15:8d:00:01:b9:46:51-01-0402
 sensor.kok_2:
+  name:
   platform: deconz
   unique_id: 00:15:8d:00:01:b9:46:51-01-0405
 sensor.kok_3:
+  name:
   platform: deconz
   unique_id: 00:15:8d:00:01:b9:46:51-01-0403
 sensor.barnkammare:
+  name:
   platform: deconz
   unique_id: 00:15:8d:00:01:b9:63:39-01-0402
 sensor.barnkammare_2:
+  name:
   platform: deconz
   unique_id: 00:15:8d:00:01:b9:63:39-01-0405
 sensor.vardagsrum:
+  name:
   platform: deconz
   unique_id: 00:15:8d:00:01:b9:63:87-01-0405
 sensor.vardagsrum_2:
+  name:
   platform: deconz
   unique_id: 00:15:8d:00:01:b9:63:87-01-0402
 sensor.barnkammare_3:
+  name:
   platform: deconz
   unique_id: 00:15:8d:00:01:b9:63:39-01-0403
 sensor.vardagsrum_3:
+  name:
   platform: deconz
   unique_id: 00:15:8d:00:01:b9:63:87-01-0403
 sensor.sovrum:
+  name:
   platform: deconz
   unique_id: 00:15:8d:00:01:b9:55:6e-01-0402
 sensor.sovrum_2:
+  name:
   platform: deconz
   unique_id: 00:15:8d:00:01:b9:55:6e-01-0405
 sensor.sovrum_3:
+  name:
   platform: deconz
   unique_id: 00:15:8d:00:01:b9:55:6e-01-0403
+sensor.switch_koket_battery_level:
+  name:
+  platform: deconz
+  unique_id: 90:fd:9f:ff:fe:4c:7b:57-01-1000
+sensor.switch_entren_battery_level:
+  name:
+  platform: deconz
+  unique_id: 90:fd:9f:ff:fe:32:7d:76-01-1000
+sensor.switch_korridoren_battery_level:
+  name:
+  platform: deconz
+  unique_id: 90:fd:9f:ff:fe:4c:98:37-01-1000
+binary_sensor.rorelse_korridoren:
+  name:
+  platform: deconz
+  unique_id: 00:0b:57:ff:fe:99:42:c6-01-0006
+media_player.synvillan:
+  name:
+  platform: cast
+  unique_id: 978f9799-0845-d242-63d2-364b88be7d89
+binary_sensor.rorelse_korridoren_2:
+  name: rorelse_korridoren
+  platform: deconz
+  unique_id: 00:0b:57:ff:fe:99:42:c6-01-1000
+sensor.testknapp_battery_level:
+  name:
+  platform: deconz
+  unique_id: 00:15:8d:00:01:a6:67:57-01-0006
+sensor.kaffeknapp_battery_level:
+  name:
+  platform: deconz
+  unique_id: 00:15:8d:00:01:23:de:f9-01-0006
+sensor.daylight:
+  name:
+  platform: deconz
+  unique_id: 00:21:2e:ff:ff:01:bb:16-01
