@@ -10,12 +10,13 @@
 ## Turn on bedroom window light at sunset
   - alias: Bedroom light on at sunset
     trigger:
-      platform: sun
-      event: sunset
-      offset: '-00:30:00'
+      platform: numeric_state
+      entity_id: sun.sun
+      value_template: '{{ state.attributes.elevation }}'
+      below: -1.5
     condition:
       condition: time
-      before: '22:00:00'
+      before: '21:40:00'
     action:
       - service: switch.turn_on
         entity_id: switch.sovrum_fonster_switch
