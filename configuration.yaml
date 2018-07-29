@@ -148,11 +148,6 @@ timer:
 zwave:
   usb_path: /dev/zwave
 
-# ConBee deCONZ
-deconz:
-  host: !secret deconz_ip
-  port: !secret deconz_port
-
 ###########
 # Scripts #
 ###########
