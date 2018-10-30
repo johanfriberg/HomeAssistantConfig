@@ -215,7 +215,7 @@
       event_type: deconz_event
       event_data:
         id: switch_matplats
-        event: 1003
+        event: 2003
     action:
       - service: ligth.turn_off
         entity_id: light.koket_taklampa
@@ -232,7 +232,7 @@
       event_type: deconz_event
       event_data:
         id: switch_matplats
-        event: 1003
+        event: 2003
     action:
       - service: ligth.turn_on
         data_template:
