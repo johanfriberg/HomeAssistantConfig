@@ -208,7 +208,7 @@
     initial_state: 'on'
     condition:
       - condition: state
-        entity_id: light.koket_bordet
+        entity_id: 'light.koket_bordet'
         state: 'off'
     trigger:
       platform: event
@@ -225,7 +225,7 @@
     initial_state: 'on'
     condition:
       - condition: state
-        entity_id: light.koket_bordet
+        entity_id: 'light.koket_bordet'
         state: 'on'
     trigger:
       platform: event
