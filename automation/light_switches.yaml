@@ -204,41 +204,41 @@
 
 ## Sync kitchen lights
   # Kitchen table light is off
-  #- alias: 'Sync kitchen table to roof light when off'
-  #  initial_state: 'on'
-  #  condition:
-  #    - condition: state
-  #      entity_id: light.koket_bordet
-  #      state: 'off'
-  #  trigger:
-  #    platform: event
-  #    event_type: deconz_event
-  #    event_data:
-  #      id: switch_matplats
-  #      event: 1003
-  #  action:
-  #    - service: ligth.turn_off
-  #      entity_id: light.koket_taklampa
+  - alias: 'Sync kitchen table to roof light when off'
+    initial_state: 'on'
+    condition:
+      - condition: state
+        entity_id: light.koket_bordet
+        state: 'off'
+    trigger:
+      platform: event
+      event_type: deconz_event
+      event_data:
+        id: switch_matplats
+        event: 1003
+    action:
+      - service: ligth.turn_off
+        entity_id: light.koket_taklampa
 
   # Kitchen table light is on
-  #- alias: 'Sync kitchen table to roof light when on'
-  #  initial_state: 'on'
-  #  condition:
-  #    - condition: state
-  #      entity_id: light.koket_bordet
-  #      state: 'on'
-  #  trigger:
-  #    platform: event
-  #    event_type: deconz_event
-  #    event_data:
-  #      id: switch_matplats
-  #      event: 1003
-  #  action:
-  #    - service: ligth.turn_on
-  #      data_template:
-  #        entity_id: light.koket_taklampa
-  #        brightness: '{{ states.light.koket_bordet.attributes.brightness }}'
-  #        color_temp: '{{ states.light.koket_bordet.attributes.color_temp }}'
+  - alias: 'Sync kitchen table to roof light when on'
+    initial_state: 'on'
+    condition:
+      - condition: state
+        entity_id: light.koket_bordet
+        state: 'on'
+    trigger:
+      platform: event
+      event_type: deconz_event
+      event_data:
+        id: switch_matplats
+        event: 1003
+    action:
+      - service: ligth.turn_on
+        data_template:
+          entity_id: light.koket_taklampa
+          brightness: '{{ states.light.koket_bordet.attributes.brightness }}'
+          color_temp: '{{ states.light.koket_bordet.attributes.color_temp }}'
 
 
 #############
