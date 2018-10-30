@@ -217,7 +217,7 @@
         id: switch_matplats
         event: 2003
     action:
-      - service: ligth.turn_off
+      - service: light.turn_off
         entity_id: light.koket_taklampa
 
   # Kitchen table light is on
@@ -234,7 +234,7 @@
         id: switch_matplats
         event: 2003
     action:
-      - service: ligth.turn_on
+      - service: light.turn_on
         data_template:
           entity_id: light.koket_taklampa
           brightness: '{{ states.light.koket_bordet.attributes.brightness }}'
