@@ -10,3 +10,9 @@
     sequence:
       - service: shell_command.git_pull
       - service: homeassistant.restart
+
+  # GIT Pull - Useful when updating ui-lovelace.yaml and restart isn't required
+  git_pull:
+    alias: GIT Pull
+    sequence:
+      - service: shell_command.git_pull

@@ -1,0 +1,26 @@
+title: Hemma
+views:
+  # Main View
+  # Ligth Control View
+  - title: Belysning
+    # Icon used for the tab
+    icon: mdi:lightbulb-on-outline
+    # ID, must be unique
+    id: Belysning
+    # Cards to show in the view
+    cards:
+      # Bedroom
+      # Livingroom
+      # Kitchen
+      - id: Koket
+        type: glance
+        title: Köket
+        entities:
+          - entity: light.koket_taklampa
+            name: Taklampa
+          - entity: light.koket_bordet
+            name: Bordet
+          - entity: switch.kok_fonster_switch
+            name: Fönstret
+      # Hallway
+  # TV Control View
