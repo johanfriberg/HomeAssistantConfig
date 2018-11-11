@@ -10,7 +10,26 @@ views:
     # Cards to show in the view
     cards:
       # Bedroom
+      - id: Sovrummet
+        type: horizontal-stack
+        cards:
+          - id: sovrummet-fonster
+            type: glance
+            entities:
+              - entity: switch.sovrum_fonster_switch
+                name: Fönstret
+          - id: sovrummet-sanggavel
+            type: light
+            entity: light.bed_headboard
+
       # Livingroom
+      - id: Vardagsrummet
+        type: glance
+        title: Vardagsrummet
+        entities:
+          - entity: switch.vardagsrum_fonster_switch
+            name: Fönstret
+
       # Kitchen
       - id: Koket
         type: glance
@@ -22,5 +41,17 @@ views:
             name: Bordet
           - entity: switch.kok_fonster_switch
             name: Fönstret
+
       # Hallway
+      - id: Hallen
+        type: entities
+        title: Hallen
+        show_header_toggle: false
+        entities:
+          - entity: light.korridoren
+            name: Korridoren
+          - entity: light.entren
+            name: Entren
+
   # TV Control View
+  # Maintenance View
