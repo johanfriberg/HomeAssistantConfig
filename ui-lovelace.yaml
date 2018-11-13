@@ -1,6 +1,23 @@
 title: Hemma
 views:
   # Main View
+  - title: Översikt
+    # Icon used for the tab
+    icon: mdi:home-modern
+    # ID - must be unique
+    id: Oversikt
+    # Cards to show in the view
+    cards:
+      # Presence card
+      - id: presence
+        type: glance
+        entities:
+          - entity: device_tracker.9c5cf9c2bc62
+            name: Johan
+          - entity: device_tracker.androidce7ba79f584b865d
+            name: Caroline
+      # Weather forecast cards
+
   # Ligth Control View
   - title: Belysning
     # Icon used for the tab
@@ -18,8 +35,8 @@ views:
             entities:
               - entity: switch.sovrum_fonster_switch
                 name: Fönstret
-          - id: sovrummet-sanggavel
-            type: light
+          - type: light
+            id: sovrummet-sanggavel
             entity: light.bed_headboard
 
       # Livingroom
