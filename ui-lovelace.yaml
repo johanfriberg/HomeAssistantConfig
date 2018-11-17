@@ -17,6 +17,9 @@ views:
           - entity: device_tracker.androidce7ba79f584b865d
             name: Caroline
       # Weather forecast cards
+      - id: weather-home
+        type: weather-forecast
+        entity: weather.smhi_home
 
   # Ligth Control View
   - title: Belysning
