@@ -140,4 +140,4 @@
 #                - sun
     action:
       - service: switch.turn_off
-        entity_id: switch.kok_fonster_switch, switch.vardagsrum_fonster_switch
+        entity_id: switch.kok_fonster_switch, switch.vardagsrum_fonster_switch, switch.sovrum_fonster_switch
