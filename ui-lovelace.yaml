@@ -58,10 +58,16 @@ views:
         entities:
           - entity: light.koket_taklampa
             name: Taklampa
+            tap_action: toggle
+            hold_action: more-info
           - entity: light.koket_bordet
             name: Bordet
+            tap_action: toggle
+            hold_action: more-info
           - entity: switch.kok_fonster_switch
             name: Fönstret
+            tap_action: toggle
+            hold_action: more-info
 
       # Hallway
       - id: Hallen
