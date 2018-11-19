@@ -34,10 +34,11 @@ views:
         type: horizontal-stack
         cards:
           - id: sovrummet-fonster
-            type: glance
-            entities:
-              - entity: switch.sovrum_fonster_switch
-                name: Fönstret
+            type: entity-button
+            entity: switch.sovrum_fonster_switch
+            name: Fönstret
+            tap_action: toggle
+            hold_action: more-info
           - type: light
             id: sovrummet-sanggavel
             entity: light.bed_headboard
