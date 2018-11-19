@@ -69,6 +69,7 @@ views:
             name: Fönstret
             tap_action: toggle
             hold_action: more-info
+            icon: mdi:lightbulb
 
       # Hallway
       - id: Hallen
