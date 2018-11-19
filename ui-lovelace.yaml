@@ -50,6 +50,7 @@ views:
         entities:
           - entity: switch.vardagsrum_fonster_switch
             name: Fönstret
+            icon: mdi:lightbulb
 
       # Kitchen
       - id: Koket
