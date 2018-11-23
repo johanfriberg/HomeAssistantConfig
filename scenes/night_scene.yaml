@@ -1,0 +1,10 @@
+  - name: Nattläge
+    entities:
+      group.all_lights:
+        state: off
+      switch.kok_fonster_switch:
+        state: off
+      switch.vardagsrum_fonster_switch:
+        state: off
+      switch.sovrum_fonster_switch:
+        state: off

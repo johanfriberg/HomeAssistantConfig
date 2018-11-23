@@ -10,6 +10,7 @@ known_devices.yaml
 
 # Include directories
 !automation
+!scenes
 !scripts
 !scripts/*
 !scripts/python
