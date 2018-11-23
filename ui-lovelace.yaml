@@ -1,6 +1,8 @@
 title: Hemma
 views:
-  # Main View
+  ###############
+  ## Main View ##
+  ###############
   - title: Översikt
     # Icon used for the tab
     icon: mdi:home-modern
@@ -20,8 +22,21 @@ views:
       - id: weather-home
         type: weather-forecast
         entity: weather.smhi_home
+      # Scene activation card
+      - id: home_scene_activation
+        type: horizontal-stack
+        cards:
+          - id: home_night_scene_activation
+            type: entity-button
+            icon: mdi:hotel
+            entity: scene.nattlage
+            name: Natt
+            tap_action: call-service
+            service: scene.turn_on
 
-  # Ligth Control View
+  ########################
+  ## Ligth Control View ##
+  ########################
   - title: Belysning
     # Icon used for the tab
     icon: mdi:lightbulb-on-outline
@@ -82,5 +97,9 @@ views:
           - entity: light.entren
             name: Entren
 
-  # TV Control View
-  # Maintenance View
+  #####################
+  ## TV Control View ##
+  #####################
+  ######################
+  ## Maintenance View ##
+  ######################
