@@ -6,6 +6,7 @@
 
 # Start timer and turn on outlet on single click if timer state is idle
   - alias: Activate coffe timer
+    initial_state: 'on'
     trigger:
       platform: event
       event_type: deconz_event
@@ -24,6 +25,7 @@
 
 # Reset timer duration on double click if timer is active
   - alias: Reset coffe timer duration
+    initial_state: 'on'
     trigger:
       - platform: event
         event_type: deconz_event
@@ -40,6 +42,7 @@
 
 # Stop timer and turn off outlet on single click or if timer is finished
   - alias: Deactivate coffe timer
+    initial_state: 'on'
     trigger:
       - platform: event
         event_type: deconz_event

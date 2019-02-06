@@ -6,6 +6,7 @@
 ###########################################
 
   - alias: Update config if Travis build is successful
+    initial_state: 'on'
     trigger:
       platform: state
       entity_id: sensor.johanfriberghomeassistantconfig_last_build_state

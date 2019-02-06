@@ -9,6 +9,7 @@
 #############
 ## Turn on bedroom window light at sunset
   - alias: Bedroom light on at sunset
+    initial_state: 'on'
     trigger:
       platform: numeric_state
       entity_id: sun.sun
@@ -31,6 +32,7 @@
 #################
 ## Turn on lights at sunset
   - alias: Window lights on at sunset
+    initial_state: 'on'
     trigger:
       platform: numeric_state
       entity_id: sun.sun
@@ -58,6 +60,7 @@
 
 ## Turn on lights in the morning
   - alias: Window lights on in the morning
+    initial_state: 'on'
     trigger:
       - platform: time
         at: '07:30:00'
@@ -74,6 +77,7 @@
 
 ## Turn off lights in the evening
   - alias: Window lights off in the evening
+    initial_state: 'on'
     trigger:
       - platform: time
         at: '22:30:00'
@@ -103,6 +107,7 @@
 
 ## Turn off lights in the morning
   - alias: Window lights off in the morning
+    initial_state: 'on'
     trigger:
       - platform: numeric_state
         entity_id: sun.sun

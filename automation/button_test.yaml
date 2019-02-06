@@ -8,6 +8,7 @@
 # One click    #
 ################
   - alias: Single click
+    initial_state: 'on'
     trigger:
       platform: event
       event_type: deconz_event
@@ -22,6 +23,7 @@
 # Two clicks   #
 ################
   - alias: Double click
+    initial_state: 'on'
     trigger:
       platform: event
       event_type: deconz_event
@@ -36,6 +38,7 @@
 # Three clicks #
 ################
   - alias: Tripple click
+    initial_state: 'on'
     trigger:
       platform: event
       event_type: deconz_event
@@ -50,6 +53,7 @@
 # Four clicks  #
 ################
   - alias: Quadruple click
+    initial_state: 'on'
     trigger:
       platform: event
       event_type: deconz_event

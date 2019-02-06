@@ -97,9 +97,21 @@ views:
           - entity: light.entren
             name: Entren
 
+  ##################
+  ## Climate view ##
+  ##################
+  - title: Klimat
+    icon: mdi:thermometer
+    id: climate
+    cards:
+      
   #####################
   ## TV Control View ##
   #####################
   ######################
   ## Maintenance View ##
   ######################
+  - title: Underhåll
+    icon: mdi:cogs
+    id: maintenance
+    cards:

@@ -4,6 +4,7 @@
 #    renewal of SSL certificate has failed.
 ###########################################
 #  - alias: 'SSL expiry notification'
+#    initial_state: 'on'
 #    trigger:
 #      platform: numeric_state
 #      entity_id: sensor.ssl_cert_expiry
