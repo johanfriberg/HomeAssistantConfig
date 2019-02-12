@@ -17,7 +17,7 @@ homeassistant:
 # Enables the frontend
 frontend:
 
-# Enables the system_healt API and system healt info
+# Enables the system_health API and system health info
 system_health:
 
 # Enables configuration UI
