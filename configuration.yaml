@@ -99,10 +99,10 @@ zone: !include zones.yaml
 
 device_tracker:
   - platform: netgear
-    url: http://routerlogin.net:80
+    #url: http://routerlogin.net:80
     #host: !secret router_ip
     #port: !secret router_port
-    username: !secret router_username
+    #username: !secret router_username
     password: !secret router_password
     new_device_defaults:
       track_new_devices: false
