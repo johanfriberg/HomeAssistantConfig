@@ -62,6 +62,12 @@ light:
   - platform: switch
     name: Vardagsrum Fönster
     entity_id: switch.vardagsrum_fonster_switch
+  - platform: switch
+    name: Kök Fönster
+    entity_id: switch.kok_fonster_switch
+  - platform: switch
+    name: Sovrum Fönster
+    entity_id: switch.sovrum_fonster_switch
 
 ##################################
 # Logging and history components #
