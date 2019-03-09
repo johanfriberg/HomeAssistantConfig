@@ -55,6 +55,14 @@ conversation:
 tts:
 - platform: google
 
+###########################
+# Show switches as lights #
+###########################
+light:
+  - platform: switch
+    name: Vardagsrum Fönster
+    entity_id: switch.vardagsrum_fonster_switch
+
 ##################################
 # Logging and history components #
 ##################################
